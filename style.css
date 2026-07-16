@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #333;
+}
+
+h1 {
+    color: #0066cc;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #444;
+    margin-top: 30px;
+}
+
+.job,
+.edu {
+    margin-bottom: 15px;
+}
+
+.date {
+    color: #777;
+    font-style: italic;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tab Container Layout */
+.tab-container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+/* Button Navigation Row */
+.tab-buttons {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    gap: 5px;
+}
+
+/* Individual Tab Buttons */
+.tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Hover and Active Visual States */
+.tab-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.tab-btn.active {
+    border-bottom: 3px solid #007BFF;
+    color: #007BFF;
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+/* Content Hiding Logic */
+.tab-panel {
+    display: none;
+    padding: 20px 0;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .tab-buttons {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    
+    .tab-btn {
+        border-bottom: 1px solid #ccc;
+        border-radius: 0;
+        text-align: left;
+    }
+    
+    .tab-btn.active {
+        border-bottom: 2px solid #007BFF;
+        background-color: #f8f9fa;
+    }
+}
