@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-        <h1 class="rainbow_text_animated">Megan Geldenhuys</h1>
 
-    <p><B>Email:</B> meggeld07@gmail.com | <B>Phone:</B> 0822168344 | <a href="https://www.linkedin.com/in/megan-geldenhuys-646301362">LinkedIn</a> | <a href="https://github.com/ch4iky">Github</a></p>
+    <!-- ===== 4 SEPARATE STARS ===== -->
+    
+    <!-- Star 1: LEFT TOP (BLUE) - 400px -->
+    <svg class="star-left-top" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 62,35 95,35 68,55 78,90 50,70 22,90 32,55 5,35 38,35" 
+                 fill="#7ba3f5" stroke="#7ba3f5" stroke-width="8" stroke-linejoin="round" />
+    </svg>
+
+    <!-- Star 2: LEFT BOTTOM (LILAC) - 150px -->
+    <svg class="star-left-bottom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 62,35 95,35 68,55 78,90 50,70 22,90 32,55 5,35 38,35" 
+                 fill="#c4a8f5" stroke="#c4a8f5" stroke-width="8" stroke-linejoin="round" />
+    </svg>
+
+    <!-- Star 3: RIGHT TOP (LILAC) - 150px -->
+    <svg class="star-right-top" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 62,35 95,35 68,55 78,90 50,70 22,90 32,55 5,35 38,35" 
+                 fill="#c4a8f5" stroke="#c4a8f5" stroke-width="8" stroke-linejoin="round" />
+    </svg>
+
+    <!-- Star 4: RIGHT BOTTOM (BLUE) - 400px -->
+    <svg class="star-right-bottom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="50,5 62,35 95,35 68,55 78,90 50,70 22,90 32,55 5,35 38,35" 
+                 fill="#7ba3f5" stroke="#7ba3f5" stroke-width="8" stroke-linejoin="round" />
+    </svg>
+
+    <!-- ===== YOUR CONTENT ===== -->
+    <h1 class="rainbow_text_animated">Megan Geldenhuys</h1>
+
+    <p><b>Email:</b> meggeld07@gmail.com | <b>Phone:</b> 0822168344 | <a href="https://www.linkedin.com/in/megan-geldenhuys-646301362">LinkedIn</a> | <a href="https://github.com/ch4iky">Github</a></p>
 
     <h2>Professional Summary</h2>
     <p>I'm a third-year IT student with strong skills in C# and Java, 
@@ -22,7 +49,6 @@
 
     <!-- Tab Container -->
     <div class="tab-container">
-        <!-- Tab Headers -->
         <div class="tab-buttons">
             <button class="tab-btn active" data-tab="tab1">Work Experience</button>
             <button class="tab-btn" data-tab="tab2">Education</button>
@@ -30,7 +56,6 @@
             <button class="tab-btn" data-tab="tab4">Skills</button>
         </div>
 
-        <!-- Tab Content Panels -->
         <div id="tab1" class="tab-panel active">
             <h2>Work Experience</h2>
             <div class="job">
@@ -51,20 +76,73 @@ new staff.</p>
             </div>
         </div>
 
-      <div id="tab3" class="tab-panel">
-    <h2>Projects and Github</h2>
-    <div class="projects">
-        <p>Check out my work at:<a href="https://github.com/ch4iky"> Github</a> </p>
-        
-        <strong>Animal Shelter Outreach Management System</strong>
-        <p>Developed a full-stack desktop application using C# and Windows Forms to digitize operations for an animal shelter, based on the project theme "Make the World a Better Place."</p>
+        <div id="tab3" class="tab-panel">
+            <h2>Projects and Github</h2>
+            <div class="projects">
+                <p>Check out my work at:<a href="https://github.com/ch4iky"> Github</a> </p>
+                <strong>Animal Shelter Outreach Management System</strong>
+                <p>Developed a full-stack desktop application using C# and Windows Forms to digitize operations for an animal shelter, based on the project theme "Make the World a Better Place."</p>
+            </div>
+        </div>
+
+        <div id="tab4" class="tab-panel">
+            <h2>Skills</h2>
+            <div class="skills"></div>
+            <p>Programming languages: C#, Java, C++, Python</p>
+            <p>Tools and Technologies: Visual Studio, Windows Forms</p>
+        </div>
     </div>
-</div>
- <div id="tab4" class="tab-panel">
-    <h2>Skills</h2>
-     <div class="skills"></div>
-    <p>Programming languages: C#, Java, C++, Python</p>
-    <p>Tools and Technologies: Visual Studio, Windows Forms</p>
+
+    <!-- ===== BOTTOM STAR OUTLINE + CONTENT SIDE BY SIDE ===== -->
+    <div class="bottom-star-wrapper">
+        <!-- LEFT: Star outline only -->
+        <div class="star-outline-container">
+            <svg class="star-outline" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,5 62,35 95,35 68,55 78,90 50,70 22,90 32,55 5,35 38,35" 
+                         fill="none" 
+                         stroke="#7ba3f5" 
+                         stroke-width="10" 
+                         stroke-linejoin="round" />
+            </svg>
+            <!-- Photo inside star -->
+            <div class="star-photo-inside">
+                <img src="https://via.placeholder.com/120x120/7ba3f5/ffffff?text=Photo" alt="Your Photo">
+            </div>
+        </div>
+
+        <!-- RIGHT: Content block (text + tabs) -->
+        <div class="star-content-block">
+            <h3 class="star-block-title">About Me</h3>
+            <p class="star-block-text">
+                I'm Megan, a third-year IT student passionate about coding and cybersecurity.
+                I love building things that make a difference!
+            </p>
+            
+            <!-- Tabs inside the content block -->
+            <div class="star-block-tabs">
+                <div class="star-block-tab-buttons">
+                    <button class="star-block-tab-btn active" data-blocktab="btab1">Contact</button>
+                    <button class="star-block-tab-btn" data-blocktab="btab2">Social</button>
+                    <button class="star-block-tab-btn" data-blocktab="btab3">Interests</button>
+                </div>
+                <div class="star-block-tab-content">
+                    <div id="btab1" class="star-block-tab-panel active">
+                        <p><strong>Email:</strong> meggeld07@gmail.com</p>
+                        <p><strong>Phone:</strong> 0822168344</p>
+                    </div>
+                    <div id="btab2" class="star-block-tab-panel">
+                        <p><a href="https://www.linkedin.com/in/megan-geldenhuys-646301362">LinkedIn</a></p>
+                        <p><a href="https://github.com/ch4iky">GitHub</a></p>
+                    </div>
+                    <div id="btab3" class="star-block-tab-panel">
+                        <p>🎮 Gaming</p>
+                        <p>💻 Coding</p>
+                        <p>🔐 Cybersecurity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
