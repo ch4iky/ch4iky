@@ -37,7 +37,8 @@
     <!-- ===== YOUR CONTENT ===== -->
     <h1 class="rainbow_text_animated">Megan Geldenhuys</h1>
 
-    <p><b>Email:</b> meggeld07@gmail.com | <b>Phone:</b> 0822168344 | <a href="https://www.linkedin.com/in/megan-geldenhuys-646301362">LinkedIn</a> | <a href="https://github.com/ch4iky">Github</a></p>
+    <!-- ===== SECTION DIVIDER ===== -->
+    <hr class="section-divider">
 
     <h2>Professional Summary</h2>
     <p>I'm a third-year IT student with strong skills in C# and Java, 
@@ -47,55 +48,137 @@
         from years in fast-paced management. I'm looking for opportunities in
          software development or cybersecurity where I can contribute and keep growing.</p>
 
+    <!-- ===== SECTION DIVIDER ===== -->
+    <hr class="section-divider">
+
     <!-- Tab Container -->
     <div class="tab-container">
         <div class="tab-buttons">
-            <button class="tab-btn active" data-tab="tab1">Work Experience</button>
-            <button class="tab-btn" data-tab="tab2">Education</button>
-            <button class="tab-btn" data-tab="tab3">Projects</button>
-            <button class="tab-btn" data-tab="tab4">Skills</button>
+            <button class="tab-btn active" data-tab="tab1"> Work Experience</button>
+            <button class="tab-btn" data-tab="tab2"> Education</button>
+            <button class="tab-btn" data-tab="tab3"> Projects</button>
+            <button class="tab-btn" data-tab="tab4"> Skills</button>
         </div>
 
+        <!-- TAB 1: Work Experience -->
         <div id="tab1" class="tab-panel active">
-            <h2>Work Experience</h2>
-            <div class="job">
-                <strong>Academic Demonstrator / Teaching Assistant</strong> — <em>North-West University</em> <span class="date">(2026 - Present)</span>
-                <p>Assess and grade student assignments, tests, and practical projects for
-CMPG 215 (Information Security) and CMPG 212 (C# Programming with Web
-Applications), ensuring accurate evaluation against academic rubrics</p>
-                 <strong>Barista / Shift Manager</strong> — <em>HartsPad Adventure Trails</em> <span class="date">(2021 - Present)</span>
-                <p>Manage daily operations and lead a small team, delegating tasks, and training
-new staff.</p>
+            <div class="content-block-wrapper">
+                <div class="block-icon"></div>
+                <div class="block-content">
+                    <h3 class="block-title"></h3>
+                    
+                    <div class="block-tabs">
+                        <div class="block-tab-buttons">
+                            <button class="block-tab-btn active" data-blocktab="work1">Academic Demonstrator</button>
+                            <button class="block-tab-btn" data-blocktab="work2">Barista / Shift Manager</button>
+                        </div>
+                        <div class="block-tab-content">
+                            <div id="work1" class="block-tab-panel active">
+                                <p><strong>Academic Demonstrator / Teaching Assistant</strong> — <em>North-West University</em> <span class="date">(2026 - Present)</span></p>
+                                <p>Assess and grade student assignments, tests, and practical projects for CMPG 215 (Information Security) and CMPG 212 (C# Programming with Web Applications), ensuring accurate evaluation against academic rubrics.</p>
+                            </div>
+                            <div id="work2" class="block-tab-panel">
+                                <p><strong>Barista / Shift Manager</strong> — <em>HartsPad Adventure Trails</em> <span class="date">(2021 - Present)</span></p>
+                                <p>Manage daily operations and lead a small team, delegating tasks, and training new staff.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="tab2" class="tab-panel">
-            <h2>Education</h2>
-            <div class="edu">
-                <strong>Bsc Information Technology</strong> — <em>North-West University</em>
+            <div class="content-block-wrapper">
+                <div class="block-icon"></div>
+                <div class="block-content">
+                    <h3 class="block-title"></h3>
+                    
+                    <div class="block-tabs">
+                        <div class="block-tab-buttons">
+                            <button class="block-tab-btn active" data-blocktab="edu1">Current Studies</button>
+                            <button class="block-tab-btn" data-blocktab="edu2">High School</button>
+                        </div>
+                        <div class="block-tab-content">
+                            <div id="edu1" class="block-tab-panel active">
+                                <p><strong>BSc Information Technology</strong> — <em>North-West University</em> <span class="date">(2023 - Present)</span></p>
+                                <p>Third-year student focusing on software development and cybersecurity.</p>
+                            </div>
+                            <div id="edu2" class="block-tab-panel">
+                                <p><strong>National Senior Certificate</strong> — <em>Hoërskool Hartswater</em> <span class="date">(2018 - 2022)</span></p>
+                                <p>Completed with distinction in Mathematics and Physical Sciences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- TAB 3: Projects -->
         <div id="tab3" class="tab-panel">
-            <h2>Projects and Github</h2>
-            <div class="projects">
-                <p>Check out my work at:<a href="https://github.com/ch4iky"> Github</a> </p>
-                <strong>Animal Shelter Outreach Management System</strong>
-                <p>Developed a full-stack desktop application using C# and Windows Forms to digitize operations for an animal shelter, based on the project theme "Make the World a Better Place."</p>
+            <div class="content-block-wrapper">
+                <div class="block-icon"></div>
+                <div class="block-content">
+                    <h3 class="block-title"></h3>
+                    
+                    <div class="block-tabs">
+                        <div class="block-tab-buttons">
+                            <button class="block-tab-btn active" data-blocktab="proj1">Animal Shelter System</button>
+                            <button class="block-tab-btn" data-blocktab="proj2">Other Projects</button>
+                        </div>
+                        <div class="block-tab-content">
+                            <div id="proj1" class="block-tab-panel active">
+                                <p><strong>Animal Shelter Outreach Management System</strong></p>
+                                <p>Developed a full-stack desktop application using C# and Windows Forms to digitize operations for an animal shelter, based on the project theme "Make the World a Better Place."</p>
+                            </div>
+                            <div id="proj2" class="block-tab-panel">
+                                <p><strong>Coming Soon!</strong></p>
+                                <p>More projects are in development. Check back later or visit my GitHub for updates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- TAB 4: Skills -->
         <div id="tab4" class="tab-panel">
-            <h2>Skills</h2>
-            <div class="skills"></div>
-            <p>Programming languages: C#, Java, C++, Python</p>
-            <p>Tools and Technologies: Visual Studio, Windows Forms</p>
+            <div class="content-block-wrapper">
+                <div class="block-icon"></div>
+                <div class="block-content">
+                    <h3 class="block-title"></h3>
+                    
+                    <div class="block-tabs">
+                        <div class="block-tab-buttons">
+                            <button class="block-tab-btn active" data-blocktab="skill1">Languages</button>
+                            <button class="block-tab-btn" data-blocktab="skill2">Tools & Tech</button>
+                            <button class="block-tab-btn" data-blocktab="skill3">Soft Skills</button>
+                        </div>
+                        <div class="block-tab-content">
+                            <div id="skill1" class="block-tab-panel active">
+                                <p><strong>Programming Languages:</strong></p>
+                                <p>C#, Java, C++, Python</p>
+                            </div>
+                            <div id="skill2" class="block-tab-panel">
+                                <p><strong>Tools & Technologies:</strong></p>
+                                <p>Visual Studio, Windows Forms, Git, GitHub</p>
+                            </div>
+                            <div id="skill3" class="block-tab-panel">
+                                <p><strong>Soft Skills:</strong></p>
+                                <p>Leadership, Team Management, Problem Solving, Communication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- ===== SECTION DIVIDER ===== -->
+    <hr class="section-divider">
+
     <!-- ===== BOTTOM STAR OUTLINE + CONTENT SIDE BY SIDE ===== -->
     <div class="bottom-star-wrapper">
-        <!-- LEFT: Star outline only -->
+        <!-- LEFT: Star outline with photo inside -->
         <div class="star-outline-container">
             <svg class="star-outline" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="50,5 62,35 95,35 68,55 78,90 50,70 22,90 32,55 5,35 38,35" 
@@ -107,12 +190,13 @@ new staff.</p>
             <!-- Photo inside star -->
             <div class="star-photo-inside">
                 <img src="https://via.placeholder.com/120x120/7ba3f5/ffffff?text=Photo" alt="Your Photo">
+                <!-- Replace with your GitHub raw URL -->
             </div>
         </div>
 
-        <!-- RIGHT: Content block (text + tabs) -->
+        <!-- RIGHT: Content block -->
         <div class="star-content-block">
-            <h3 class="star-block-title">About Me</h3>
+            <h3 class="star-block-title"> About Me</h3>
             <p class="star-block-text">
                 I'm Megan, a third-year IT student passionate about coding and cybersecurity.
                 I love building things that make a difference!
@@ -122,8 +206,8 @@ new staff.</p>
             <div class="star-block-tabs">
                 <div class="star-block-tab-buttons">
                     <button class="star-block-tab-btn active" data-blocktab="btab1">Contact</button>
-                    <button class="star-block-tab-btn" data-blocktab="btab2">Social</button>
-                    <button class="star-block-tab-btn" data-blocktab="btab3">Interests</button>
+                    <button class="star-block-tab-btn" data-blocktab="btab2"> Social</button>
+                    <button class="star-block-tab-btn" data-blocktab="btab3"> Interests</button>
                 </div>
                 <div class="star-block-tab-content">
                     <div id="btab1" class="star-block-tab-panel active">
@@ -131,13 +215,13 @@ new staff.</p>
                         <p><strong>Phone:</strong> 0822168344</p>
                     </div>
                     <div id="btab2" class="star-block-tab-panel">
-                        <p><a href="https://www.linkedin.com/in/megan-geldenhuys-646301362">LinkedIn</a></p>
-                        <p><a href="https://github.com/ch4iky">GitHub</a></p>
+                        <p><a href="https://www.linkedin.com/in/megan-geldenhuys-646301362"> LinkedIn</a></p>
+                        <p><a href="https://github.com/ch4iky"> GitHub</a></p>
                     </div>
                     <div id="btab3" class="star-block-tab-panel">
-                        <p>🎮 Gaming</p>
-                        <p>💻 Coding</p>
-                        <p>🔐 Cybersecurity</p>
+                        <p>Gaming</p>
+                        <p>Coding</p>
+                        <p>ybersecurity</p>
                     </div>
                 </div>
             </div>
