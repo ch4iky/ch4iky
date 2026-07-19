@@ -1,8 +1,8 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // ===== MAIN TABS =====
-    const tabButtons = document.querySelectorAll('.tab-btn:not(.star-block-tab-btn)');
-    const tabPanels = document.querySelectorAll('.tab-panel:not(.star-block-tab-panel)');
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
 
     function switchTab(tabId) {
         tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -24,32 +24,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== BLOCK TABS (inside bottom content) =====
-    const blockTabButtons = document.querySelectorAll('.star-block-tab-btn');
-    const blockTabPanels = document.querySelectorAll('.star-block-tab-panel');
-
-    function switchBlockTab(tabId) {
-        blockTabButtons.forEach(btn => btn.classList.remove('active'));
-        blockTabPanels.forEach(panel => panel.classList.remove('active'));
-
-        const selectedButton = document.querySelector(`[data-blocktab="${tabId}"]`);
-        const selectedPanel = document.getElementById(tabId);
-        
-        if (selectedButton && selectedPanel) {
-            selectedButton.classList.add('active');
-            selectedPanel.classList.add('active');
-        }
-    }
-
+    // ===== BLOCK TABS =====
+    const blockTabButtons = document.querySelectorAll('.block-tab-btn');
+    
     blockTabButtons.forEach(button => {
         button.addEventListener('click', function() {
+            const parent = this.closest('.block-tabs');
             const tabId = this.getAttribute('data-blocktab');
-            switchBlockTab(tabId);
+            
+            // Remove active from all buttons in this block
+            parent.querySelectorAll('.block-tab-btn').forEach(btn => btn.classList.remove('active'));
+            // Remove active from all panels in this block
+            parent.querySelectorAll('.block-tab-panel').forEach(panel => panel.classList.remove('active'));
+            
+            // Activate clicked button
+            this.classList.add('active');
+            // Activate corresponding panel
+            const panel = parent.querySelector(`#${tabId}`);
+            if (panel) panel.classList.add('active');
+        });
+    });
+
+    // ===== STAR BLOCK TABS =====
+    const starBlockTabButtons = document.querySelectorAll('.star-block-tab-btn');
+    
+    starBlockTabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const parent = this.closest('.star-block-tabs');
+            const tabId = this.getAttribute('data-blocktab');
+            
+            // Remove active from all buttons in this block
+            parent.querySelectorAll('.star-block-tab-btn').forEach(btn => btn.classList.remove('active'));
+            // Remove active from all panels in this block
+            parent.querySelectorAll('.star-block-tab-panel').forEach(panel => panel.classList.remove('active'));
+            
+            // Activate clicked button
+            this.classList.add('active');
+            // Activate corresponding panel
+            const panel = parent.querySelector(`#${tabId}`);
+            if (panel) panel.classList.add('active');
         });
     });
 
     // Keyboard navigation
-    document.querySelectorAll('.tab-btn, .star-block-tab-btn').forEach(button => {
+    document.querySelectorAll('.tab-btn, .block-tab-btn, .star-block-tab-btn').forEach(button => {
         button.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -60,5 +78,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Make functions accessible
     window.switchTab = switchTab;
-    window.switchBlockTab = switchBlockTab;
 });
