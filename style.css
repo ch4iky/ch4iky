@@ -1,8 +1,7 @@
 /* ============================================================
-   4 SEPARATE ROUNDED STARS - Specific sizes
+   4 SEPARATE ROUNDED STARS
    ============================================================ */
 
-/* Base star styles */
 .star-left-top,
 .star-left-bottom,
 .star-right-top,
@@ -17,20 +16,20 @@
 
 /* ===== STAR 1: LEFT TOP (BLUE) - 400px ===== */
 .star-left-top {
-    width: 400px;
-    height: 400px;
-    top: 0%;
-    left: -180px;
+    width: 550px;
+    height: 550px;
+    top: -15%;
+    left: -400px;
     animation-delay: 0s;
     filter: blur(3px) brightness(1.1) drop-shadow(0 0 60px rgba(123, 163, 245, 0.5));
 }
 
 /* ===== STAR 2: LEFT BOTTOM (LILAC) - 150px ===== */
 .star-left-bottom {
-    width: 150px;
-    height: 150px;
-    top: 45%;
-    left: -60px;
+    width: 200px;
+    height: 200px;
+    top: 70%;
+    left: -80px;
     animation-delay: 0.8s;
     filter: blur(2px) brightness(1.1) drop-shadow(0 0 40px rgba(196, 168, 245, 0.5));
 }
@@ -56,19 +55,209 @@
 }
 
 /* ============================================================
-   BOTTOM STAR + CONTENT - LEFT ALIGNED, SIDE BY SIDE
+   SECTION DIVIDER - THICKER WITH ROUNDED EDGES
+   ============================================================ */
+
+.section-divider {
+    border: none;
+    height: 6px;
+    background: linear-gradient(to right, #7ba3f5, #c4a8f5, #7ba3f5);
+    border-radius: 10px;
+    margin: 40px 0;
+    opacity: 0.4;
+    box-shadow: 0 2px 15px rgba(123, 163, 245, 0.15);
+}
+
+/* ============================================================
+   CONTENT BLOCK (for tabs)
+   ============================================================ */
+
+.content-block-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 15px 0 5px 0;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(123, 163, 245, 0.2);
+    box-shadow: 0 8px 30px rgba(123, 163, 245, 0.08);
+}
+
+.block-icon {
+    flex: 0 0 50px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 1;
+}
+
+.block-content {
+    flex: 1;
+}
+
+.block-title {
+    font-size: 20px;
+    color: #1a2f6e;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.block-text {
+    font-size: 15px;
+    color: #2c3e6b;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* ============================================================
+   ROUNDED TAB BUTTONS (like About Me section)
+   ============================================================ */
+
+/* Main tab buttons - rounded */
+.tab-btn {
+    padding: 12px 24px;
+    cursor: pointer;
+    border: 2px solid #b0c6ee;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 30px !important;  /* Rounded like About Me */
+    color: #3a5090;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+}
+
+.tab-btn:hover {
+    background-color: #dce8ff;
+    color: #0033cc;
+    border-color: #7ba3f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(123, 163, 245, 0.2);
+}
+
+.tab-btn.active {
+    border: 2px solid #7ba3f5;
+    color: white;
+    font-weight: bold;
+    background: #7ba3f5;
+    box-shadow: 0 4px 20px rgba(123, 163, 245, 0.3);
+}
+
+/* Block tab buttons - rounded */
+.block-tab-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.block-tab-btn {
+    padding: 8px 20px;
+    border: 2px solid #7ba3f5;
+    background: rgba(255, 255, 255, 0.5);
+    color: #2c3e6b;
+    border-radius: 25px !important;  /* Rounded like About Me */
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.block-tab-btn:hover {
+    background: #dce8ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 163, 245, 0.15);
+}
+
+.block-tab-btn.active {
+    background: #7ba3f5;
+    color: white;
+    border-color: #7ba3f5;
+    box-shadow: 0 4px 15px rgba(123, 163, 245, 0.25);
+}
+
+/* Star block tab buttons - rounded */
+.star-block-tab-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.star-block-tab-btn {
+    padding: 6px 18px;
+    border: 2px solid #7ba3f5;
+    background: rgba(255, 255, 255, 0.5);
+    color: #2c3e6b;
+    border-radius: 25px !important;  /* Rounded like About Me */
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.star-block-tab-btn:hover {
+    background: #dce8ff;
+    transform: translateY(-2px);
+}
+
+.star-block-tab-btn.active {
+    background: #7ba3f5;
+    color: white;
+    border-color: #7ba3f5;
+    box-shadow: 0 4px 15px rgba(123, 163, 245, 0.25);
+}
+
+/* Tab content panels */
+.block-tab-content,
+.star-block-tab-content {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 15px 20px;
+    min-height: 60px;
+    border: 1px solid rgba(123, 163, 245, 0.1);
+}
+
+.block-tab-panel,
+.star-block-tab-panel {
+    display: none;
+    font-size: 14px;
+    color: #2c3e6b;
+    line-height: 1.6;
+}
+
+.block-tab-panel.active,
+.star-block-tab-panel.active {
+    display: block;
+}
+
+.block-tab-panel a,
+.star-block-tab-panel a {
+    color: #7ba3f5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.block-tab-panel a:hover,
+.star-block-tab-panel a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   BOTTOM STAR + CONTENT
    ============================================================ */
 
 .bottom-star-wrapper {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin: 60px 0 40px 0;
+    margin: 40px 0 40px 0;
     padding: 20px 0;
-    border-top: 2px solid rgba(123, 163, 245, 0.2);
 }
 
-/* LEFT: Star outline with photo inside */
 .star-outline-container {
     position: relative;
     flex: 0 0 280px;
@@ -86,7 +275,6 @@
     filter: drop-shadow(0 0 30px rgba(123, 163, 245, 0.2));
 }
 
-/* Photo inside the star */
 .star-photo-inside {
     position: absolute;
     top: 50%;
@@ -107,11 +295,10 @@
     object-fit: cover;
 }
 
-/* RIGHT: Content block */
 .star-content-block {
     flex: 1;
-    padding: 20px 25px;
-    background: rgba(255, 255, 255, 0.6);
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(123, 163, 245, 0.2);
@@ -130,67 +317,6 @@
     color: #2c3e6b;
     line-height: 1.6;
     margin-bottom: 15px;
-}
-
-/* Tabs inside content block */
-.star-block-tabs {
-    margin-top: 5px;
-}
-
-.star-block-tab-buttons {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-}
-
-.star-block-tab-btn {
-    padding: 6px 18px;
-    border: 2px solid #7ba3f5;
-    background: transparent;
-    color: #2c3e6b;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.star-block-tab-btn:hover {
-    background: #dce8ff;
-}
-
-.star-block-tab-btn.active {
-    background: #7ba3f5;
-    color: white;
-}
-
-.star-block-tab-content {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 12px;
-    padding: 12px 16px;
-    min-height: 70px;
-}
-
-.star-block-tab-panel {
-    display: none;
-    font-size: 14px;
-    color: #2c3e6b;
-    line-height: 1.6;
-}
-
-.star-block-tab-panel.active {
-    display: block;
-}
-
-.star-block-tab-panel a {
-    color: #7ba3f5;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.star-block-tab-panel a:hover {
-    text-decoration: underline;
 }
 
 /* ===== MOVEMENT ANIMATION (for side stars only) ===== */
@@ -238,19 +364,35 @@
         height: 90px;
     }
     
-    .star-content-block {
+    .content-block-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .block-icon {
+        flex: 0 0 auto;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .tab-btn {
         width: 100%;
-        padding: 15px 18px;
+        text-align: center;
+        border-radius: 30px !important;
     }
 }
 
 /* ============================================================
-   YOUR EXISTING STYLES - UPDATED (wider)
+   YOUR EXISTING STYLES
    ============================================================ */
 
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     max-width: 1100px;
     margin: 40px auto;
@@ -270,13 +412,6 @@ h2 {
     margin-top: 30px;
 }
 
-.job,
-.edu,
-.skills,
-.projects {
-    margin-bottom: 20px;
-}
-
 .date {
     color: #3a5090;
     font-style: italic;
@@ -293,46 +428,22 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Tab Container Layout */
+/* Tab Container */
 .tab-container {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     max-width: 100%;
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
 .tab-buttons {
     display: flex;
-    border-bottom: 2px solid #b0c6ee;
-    gap: 5px;
+    gap: 10px;
     flex-wrap: wrap;
-}
-
-.tab-btn {
-    padding: 12px 24px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    border-radius: 4px 4px 0 0;
-    color: #3a5090;
-}
-
-.tab-btn:hover {
-    background-color: #dce8ff;
-    color: #0033cc;
-}
-
-.tab-btn.active {
-    border-bottom: 3px solid #3366ff;
-    color: #0044dd;
-    font-weight: bold;
-    background-color: #dce8ff;
+    margin-bottom: 25px;
 }
 
 .tab-panel {
     display: none;
-    padding: 20px 0;
     animation: fadeIn 0.3s ease;
 }
 
@@ -348,75 +459,6 @@ a:hover {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        max-width: 100%;
-        margin: 20px auto;
-        padding: 0 15px;
-    }
-
-    .tab-buttons {
-        flex-direction: column;
-        border-bottom: none;
-        gap: 2px;
-    }
-    
-    .tab-btn {
-        padding: 14px 20px;
-        border-bottom: 2px solid #d2e1f3;
-        border-radius: 0;
-        text-align: left;
-        font-size: 15px;
-        width: 100%;
-    }
-    
-    .tab-btn.active {
-        border-bottom: 3px solid #3366ff;
-        background-color: #dce8ff;
-    }
-
-    .tab-panel {
-        padding: 15px 0;
-    }
-
-    h1 {
-        font-size: 24px;
-        padding-bottom: 8px;
-    }
-
-    h2 {
-        font-size: 20px;
-        margin-top: 25px;
-    }
-
-    .job,
-    .edu {
-        margin-bottom: 15px;
-    }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-    body {
-        padding: 0 12px;
-        margin: 15px auto;
-    }
-
-    .tab-btn {
-        padding: 12px 16px;
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    h2 {
-        font-size: 18px;
     }
 }
 
