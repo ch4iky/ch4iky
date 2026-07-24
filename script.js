@@ -1,6 +1,6 @@
-// Wait for DOM to be fully loaded
+// wait for fom to be loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // ===== MAIN TABS =====
+    // main tabs
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== BLOCK TABS =====
+    // tabs
     const blockTabButtons = document.querySelectorAll('.block-tab-btn');
     
     blockTabButtons.forEach(button => {
@@ -32,41 +32,38 @@ document.addEventListener('DOMContentLoaded', function() {
             const parent = this.closest('.block-tabs');
             const tabId = this.getAttribute('data-blocktab');
             
-            // Remove active from all buttons in this block
+            // remove active from all buttons in this block
             parent.querySelectorAll('.block-tab-btn').forEach(btn => btn.classList.remove('active'));
-            // Remove active from all panels in this block
+            // remove active from all panels in this block
             parent.querySelectorAll('.block-tab-panel').forEach(panel => panel.classList.remove('active'));
             
-            // Activate clicked button
+            // activate clicked button
             this.classList.add('active');
-            // Activate corresponding panel
+            // activate corresponding panel
             const panel = parent.querySelector(`#${tabId}`);
             if (panel) panel.classList.add('active');
         });
     });
 
-    // ===== STAR BLOCK TABS =====
+    // star tabs
     const starBlockTabButtons = document.querySelectorAll('.star-block-tab-btn');
     
     starBlockTabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const parent = this.closest('.star-block-tabs');
             const tabId = this.getAttribute('data-blocktab');
-            
-            // Remove active from all buttons in this block
+            // remove active from all buttons in this block
             parent.querySelectorAll('.star-block-tab-btn').forEach(btn => btn.classList.remove('active'));
-            // Remove active from all panels in this block
+            // remove active from all panels in this block
             parent.querySelectorAll('.star-block-tab-panel').forEach(panel => panel.classList.remove('active'));
-            
-            // Activate clicked button
+            // activate button clicked
             this.classList.add('active');
-            // Activate corresponding panel
+            // activate corresponding panel
             const panel = parent.querySelector(`#${tabId}`);
             if (panel) panel.classList.add('active');
         });
     });
-
-    // Keyboard navigation
+    // keyboard nav
     document.querySelectorAll('.tab-btn, .block-tab-btn, .star-block-tab-btn').forEach(button => {
         button.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -75,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Make functions accessible
+    // makes functions accessible
     window.switchTab = switchTab;
 });
