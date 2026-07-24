@@ -16,9 +16,9 @@
 
 /* ===== STAR 1: LEFT TOP (BLUE) - 400px ===== */
 .star-left-top {
-    width: 550px;
+    width: 500px;
     height: 550px;
-    top: -15%;
+    top: -20%;
     left: -400px;
     animation-delay: 0s;
     filter: blur(3px) brightness(1.1) drop-shadow(0 0 60px rgba(123, 163, 245, 0.5));
@@ -49,7 +49,7 @@
     width: 400px;
     height: 400px;
     top: 45%;
-    right: -180px;
+    right: -300px;
     animation-delay: 1.2s;
     filter: blur(3px) brightness(1.1) drop-shadow(0 0 60px rgba(123, 163, 245, 0.5));
 }
