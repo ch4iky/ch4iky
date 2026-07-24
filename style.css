@@ -481,6 +481,7 @@ h1.rainbow_text_animated {
 .header {
   position: sticky;
   top: 0;
+  z-index: 2;
   padding: 10px 16px;
   background: #f0f5ff;
   background-color:#f0f5ff;
