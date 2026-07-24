@@ -9,7 +9,6 @@
     position: fixed;
     pointer-events: none;
     z-index: -1;
-    opacity: 1 !important;
     filter: blur(3px) brightness(1.1);
     animation: softFloat 6s infinite alternate ease-in-out;
 }
